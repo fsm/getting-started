@@ -1,0 +1,15 @@
+[[constraint]]
+  name = "github.com/fsm/cache-store"
+  version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/fsm/cli"
+  version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/fsm/emitable"
+  version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/fsm/fsm"
+  version = "1.0.0"
