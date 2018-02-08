@@ -13,6 +13,8 @@ func GetStartState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 			// Set the initial number of turns to 0
 			traverser.Upsert(varTurnCount, 0)
 
+			// Say hello!
+			emitter.Emit("Hello and welcome! I am Turnstile 3000.")
 			return nil
 		},
 		ReentryAction: func() error {

@@ -16,18 +16,9 @@ func GetLockedState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 			if err != nil {
 				return err
 			}
-
-			// If we haven't met, introduce Turnstile 3000
-			if turnCount.(int) == 0 {
-				emitter.Emit("Hello and welcome! I am Turnstile 3000.")
-			} else {
-				// If it's been turned before, let the user know how many times
+			if turnCount.(int) != 0 {
 				emitter.Emit(fmt.Sprintf("Thank you for using Turnstile 3000."))
-				if turnCount.(int) == 1 {
-					emitter.Emit(fmt.Sprintf("So far I have been turned %v time.", turnCount))
-				} else {
-					emitter.Emit(fmt.Sprintf("So far I have been turned %v times.", turnCount))
-				}
+				emitter.Emit(fmt.Sprintf("My turn counter now reads '%v'!", turnCount))
 			}
 
 			// Ask the user for a coin
