@@ -4,9 +4,13 @@
 
 This package contains an example project / scaffolding for [FSM](https://github.com/fsm/fsm).
 
+The example included in this repository follows the classic turnstile state machine:
+
+![State Machine Example](https://user-images.githubusercontent.com/2105067/35996819-8b99dcae-0ce5-11e8-8765-d63c9b070232.png)
+
 ## Setting Up
 
-The first thing you're going to want to do is clone down the repository to the location you would like your project to exist.  This should be somewhere in your $GOPATH.
+The first thing you're going to want to do is clone down the repository to the location you would like your project to exist.  This should be somewhere in your `$GOPATH`.
 
 After you've cloned it down, you're going to need to update the package on [this line](https://github.com/fsm/getting-started/blob/master/main.go#L7) that references a nested package within this repo.  It will need to be updated to reflect the location where you cloned the repository.
 
