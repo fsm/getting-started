@@ -68,6 +68,16 @@ If the data tells you that you should not switch states, return nothing and the 
 
 > Looking at the diagram at the [top of this README](#getting-started), transitions are the black arrows.
 
+# Beyond the CLI
+
+If you're building a more serious bot, you're more likely going to want to use something other than [fsm/cli](https://github.com/fsm/cli) as your deployment target, and [fsm/cache-store](https://github.com/fsm/cache-store) as your data store.
+
+All FSM targets can be viewed [here](https://github.com/search?q=topic%3Afsm-target+org%3Afsm&type=Repositories).
+
+All FSM stores can be viewed [here](https://github.com/search?q=topic%3Afsm-store+org%3Afsm&type=Repositories).
+
+View their respective READMEs for usage information.
+
 # License
 
 [MIT](LICENSE.md)
