@@ -6,6 +6,8 @@ import (
 
 const varTurnCount = "turn-count"
 
+// GetStartState is a fsm.BuildState that returns a fsm.State that is
+// the entry point for the state machine.
 func GetStartState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 	return &fsm.State{
 		Slug: "start",

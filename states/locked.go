@@ -7,6 +7,8 @@ import (
 	"github.com/fsm/fsm"
 )
 
+// GetLockedState is a fsm.BuildState that returns a fsm.State that
+// represents the state of "locked" for a turnstyle machine.
 func GetLockedState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 	return &fsm.State{
 		Slug: "locked",

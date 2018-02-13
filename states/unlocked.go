@@ -5,6 +5,8 @@ import (
 	"github.com/fsm/fsm"
 )
 
+// GetUnlockedState is a fsm.BuildState that returns a fsm.State that
+// represents the state of "unlocked" for a turnstyle machine.
 func GetUnlockedState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 	return &fsm.State{
 		Slug: "unlocked",
