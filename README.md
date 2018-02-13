@@ -2,6 +2,8 @@
 
 # Getting Started
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/fsm/getting-started)](https://goreportcard.com/report/github.com/fsm/getting-started) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/fsm/Lobby)
+
 This package contains an example project / scaffolding for [FSM](https://github.com/fsm/fsm).
 
 The example included in this repository follows the classic turnstile state machine:
