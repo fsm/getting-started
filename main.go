@@ -1,17 +1,18 @@
 package main
 
 import (
-	cachestore "github.com/fsm/cache-store"
 	"github.com/fsm/cli"
+
+	cachestore "github.com/fsm/cache-store"
 	"github.com/fsm/fsm"
 	"github.com/fsm/getting-started/states"
 )
 
 func main() {
-	cli.Start(getStateMachine(), getStore())
+	cli.Start(GetStateMachine(), GetStore())
 }
 
-func getStateMachine() fsm.StateMachine {
+func GetStateMachine() fsm.StateMachine {
 	return fsm.StateMachine{
 		states.GetStartState,
 		states.GetLockedState,
@@ -19,6 +20,6 @@ func getStateMachine() fsm.StateMachine {
 	}
 }
 
-func getStore() fsm.Store {
+func GetStore() fsm.Store {
 	return cachestore.New()
 }

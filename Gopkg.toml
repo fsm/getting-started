@@ -13,3 +13,11 @@
 [[constraint]]
   name = "github.com/fsm/fsm"
   version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/fsm/test"
+  version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/stretchr/testify"
+  version = "v1.2.1"
