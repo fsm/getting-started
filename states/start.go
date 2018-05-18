@@ -21,7 +21,7 @@ func GetStartState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 			return nil
 		},
 		ValidIntents: func() []*fsm.Intent {
-			return []*fsm.Intent{intents.Literal}
+			return []*fsm.Intent{intents.CatchAll}
 		},
 		Transition: func(*fsm.Intent, map[string]string) *fsm.State {
 			return GetLockedState(emitter, traverser)

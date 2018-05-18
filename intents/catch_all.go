@@ -5,14 +5,12 @@ import (
 	"github.com/fsm/getting-started/types"
 )
 
-var InsertCoin = &fsm.Intent{
-	Slug: "insert-coin",
+var CatchAll = &fsm.Intent{
+	Slug: "catch-all",
 	Slots: map[string]*fsm.Type{
-		"coin": types.Coin,
+		"input": types.Literal,
 	},
 	Utterances: []string{
-		"Insert {coin}.",
-		"Insert a {coin}",
-		"Insert the {coin}.",
+		"{input}",
 	},
 }
