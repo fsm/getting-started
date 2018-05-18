@@ -1,10 +1,10 @@
 [[constraint]]
   name = "github.com/fsm/cache-store"
-  version = "1.0.0"
+  revision = "2703fbfc1d5f2fdc5a2b22752921690a6ea6ad33"
 
 [[constraint]]
   name = "github.com/fsm/cli"
-  version = "1.0.0"
+  revision = "e6e830c2cf88408a96608bacdb0e28b8dba20346"
 
 [[constraint]]
   name = "github.com/fsm/emitable"
@@ -12,7 +12,7 @@
 
 [[constraint]]
   name = "github.com/fsm/fsm"
-  version = "1.0.0"
+  revision = "0ea09d4673726b5b917140790e822867d8a3d03c"
 
 [[constraint]]
   name = "github.com/fsm/test"
