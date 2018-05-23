@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo -e "\033[1;35m<< New FSM Project >>\033[1;0m";
-echo -ne "\033[1;34mProject Package (ex: \033[1;35mgithub.com/BrandonRomano/project\033[1;34m): \033[1;0m"; read package
+echo -ne "\033[1;35mEnter project package (ex: github.com/BrandonRomano/project): \033[1;0m"; read package
+
 
 if [[ "$package" = "" ]]; then
     echo -e '\033[1;31mERROR: Package must be set\033[1;0m'
@@ -47,5 +48,5 @@ else
 fi
 
 # OK
-echo -e "\033[0;32mProject setup at '$packagedir'\033[1;0m"
-echo 'Run "make" in your project directory to build and run it'
+echo -e "\033[0;32mProject setup at '$packagedir'"
+echo -e 'Run "make" in your project directory to build and run it\033[1;0m'
