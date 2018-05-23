@@ -2,6 +2,7 @@ package states
 
 import (
 	"github.com/fsm/fsm"
+	"github.com/fsm/getting-started/intents"
 )
 
 const varTurnCount = "turn-count"
@@ -11,7 +12,7 @@ const varTurnCount = "turn-count"
 func GetStartState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 	return &fsm.State{
 		Slug: "start",
-		EntryAction: func() error {
+		Entry: func(isReentry bool) error {
 			// Set the initial number of turns to 0
 			traverser.Upsert(varTurnCount, 0)
 
@@ -19,10 +20,10 @@ func GetStartState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 			emitter.Emit("Hello and welcome! I am Turnstile 3000.")
 			return nil
 		},
-		ReentryAction: func() error {
-			return nil
+		ValidIntents: func() []*fsm.Intent {
+			return []*fsm.Intent{intents.CatchAll}
 		},
-		Transition: func(input interface{}) *fsm.State {
+		Transition: func(*fsm.Intent, map[string]string) *fsm.State {
 			return GetLockedState(emitter, traverser)
 		},
 	}

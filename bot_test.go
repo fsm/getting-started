@@ -3,11 +3,10 @@ package main_test
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
-
 	"github.com/fsm/emitable"
 	bot "github.com/fsm/getting-started"
 	"github.com/fsm/test"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestChatbot(t *testing.T) {
@@ -20,7 +19,7 @@ func TestChatbot(t *testing.T) {
 	assert.Equal(t, traverser.CurrentState(), "locked")
 
 	// Validate turn-count variable
-	turnCount, _ := traverser.Fetch("turn-count")
+	turnCount := traverser.Fetch("turn-count")
 	assert.Equal(t, turnCount.(int), 0)
 
 	// Validate that messages are being emitted received
@@ -42,11 +41,11 @@ func TestChatbot(t *testing.T) {
 		// Push the turnstyle
 		traverser.Send("push")
 		assert.Equal(t, traverser.CurrentState(), "locked")
-		turnCount, _ = traverser.Fetch("turn-count")
+		turnCount = traverser.Fetch("turn-count")
 		assert.Equal(t, turnCount.(int), i)
 	}
 
 	// Turn count should be 5 now
-	turnCount, _ = traverser.Fetch("turn-count")
+	turnCount = traverser.Fetch("turn-count")
 	assert.Equal(t, turnCount.(int), 5)
 }

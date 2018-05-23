@@ -2,7 +2,10 @@
 
 # Getting Started
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/fsm/getting-started)](https://goreportcard.com/report/github.com/fsm/getting-started) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/fsm/Lobby)
+[![Version](https://img.shields.io/github/tag/fsm/getting-started.svg)](https://github.com/fsm/getting-started/releases)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/fsm/getting-started/blob/master/LICENSE.md)
+[![Go Report Card](https://goreportcard.com/badge/github.com/fsm/getting-started)](https://goreportcard.com/report/github.com/fsm/getting-started)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/fsm/Lobby)
 
 This package contains an example project / scaffolding for [FSM](https://github.com/fsm/fsm).
 
