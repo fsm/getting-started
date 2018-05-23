@@ -36,17 +36,6 @@ find . | grep ".go" | grep -v vendor | while read file; do
     sed -i '' "s/$from/$to/g" "$file"
 done
 
-# Install Dependencies
-echo -e "\033[1;35mInstalling Dependencies...\033[1;0m";
-if [[ $(which dep) != "" ]]; then
-    dep ensure
-else
-    echo -e '\033[1;31mWARNING: dep is not installed\033[1;0m'
-    echo "Skipping installing dependencies"
-    echo "Install dep at https://github.com/golang/dep"
-    echo "Be sure to run dep ensure before building your project"
-fi
-
 # OK
 echo -e "\033[0;32mProject setup at '$packagedir'"
 echo -e 'Run "make" in your project directory to build and run it\033[1;0m'
