@@ -34,3 +34,6 @@ find . | grep ".go" | grep -v vendor | while read file; do
     to="$(echo "$package" | sed "s/\//\\\\\//g")"
     sed -i '' "s/$from/$to/g" "$file"
 done
+
+# OK
+echo -e "\033[0;32mProject setup at '$packagedir'\033[1;0m"
