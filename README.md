@@ -15,9 +15,13 @@ The example included in this repository follows the classic turnstile state mach
 
 # Setting Up
 
-The first thing you're going to want to do is clone down the repository to the location you would like your project to exist.  This should be somewhere in your `$GOPATH`.
+The easiest way to get started is by running the one-liner below. It will walk you through setting up a new project inside of your `$GOPATH` and you can be ready to start coding in under a minute.
 
-After you've cloned it down, you're going to need to update the package on [this line](https://github.com/fsm/getting-started/blob/master/main.go#L8), and [this line](https://github.com/fsm/getting-started/blob/master/bot_test.go#L9) that reference packages within this repo.  It will need to be updated to reflect the location where you cloned the repository.
+```sh
+bash <(curl -s https://raw.githubusercontent.com/fsm/getting-started/master/new-project.sh)
+```
+
+You can also manually clone down this repository into your $GOPATH and adjust the package references as needed.
 
 # Building & Running
 
