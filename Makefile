@@ -1,4 +1,4 @@
-BINARY = bot 
+BINARY = bot
 
 all: clean deps test build run
 
