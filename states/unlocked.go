@@ -28,16 +28,12 @@ func GetUnlockedState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 			}
 		},
 		Transition: func(intent *fsm.Intent, params map[string]string) *fsm.State {
-			switch intent {
-			case intents.PushTurnstile:
-				// Update turn count
-				turnCount := traverser.Fetch(varTurnCount)
-				traverser.Upsert(varTurnCount, turnCount.(int)+1)
+			// Update turn count
+			turnCount := traverser.Fetch(varTurnCount)
+			traverser.Upsert(varTurnCount, turnCount.(int)+1)
 
-				// Go back to locked
-				return GetLockedState(emitter, traverser)
-			}
-			return nil
+			// Go back to locked
+			return GetLockedState(emitter, traverser)
 		},
 	}
 }

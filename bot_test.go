@@ -32,11 +32,30 @@ func TestChatbot(t *testing.T) {
 		traverser.GetReceived().(emitable.QuickReply).Message,
 	)
 
+	// Ensure we don't switch states with invalid input
+	traverser.Send("HELLO")
+	assert.Equal(t,
+		"Sorry, I don't quite understand.",
+		traverser.GetReceived(),
+	)
+	assert.Equal(t, traverser.CurrentState(), "locked")
+	traverser.GetAllReceived() // Flush
+
 	// Go through the turnstyle 5 times
 	for i := 1; i <= 5; i++ {
 		// Insert a coin
 		traverser.Send("insert coin")
 		assert.Equal(t, traverser.CurrentState(), "unlocked")
+		traverser.GetAllReceived() // Flush
+
+		// Ensure invalid input won't switch states
+		traverser.Send("hello")
+		assert.Equal(t,
+			"Sorry, I don't quite understand.",
+			traverser.GetReceived(),
+		)
+		assert.Equal(t, traverser.CurrentState(), "unlocked")
+		traverser.GetAllReceived() // Flush
 
 		// Push the turnstyle
 		traverser.Send("push")
