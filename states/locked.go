@@ -40,11 +40,10 @@ func GetLockedState(emitter fsm.Emitter, traverser fsm.Traverser) *fsm.State {
 			}
 		},
 		Transition: func(intent *fsm.Intent, params map[string]string) *fsm.State {
-			switch intent {
-			case intents.InsertCoin:
-				return GetUnlockedState(emitter, traverser)
-			}
-			return nil
+			// We can safely assume that the intent is intents.InsertCoin, as FSM checks
+			// ValidIntents first before calling Transition. If ValidIntents only has
+			// one option you can do this, else you'll want to switch on intent.
+			return GetUnlockedState(emitter, traverser)
 		},
 	}
 }
