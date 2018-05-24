@@ -24,6 +24,8 @@ git clone https://github.com/fsm/getting-started.git "$packagedir"
 echo -e "\033[1;35mCleaning up...\033[1;0m";
 cd "$packagedir"
 rm -rf .git
+rm .travis.yml
+rm .codecov.yml
 rm .gitignore
 rm LICENSE.md
 rm README.md
