@@ -5,7 +5,7 @@
   <a href="https://travis-ci.org/fsm/getting-started"><img src="https://travis-ci.org/fsm/getting-started.svg?branch=master" alt="Build Status"></img></a>
   <a href="https://codecov.io/gh/fsm/getting-started"><img src="https://codecov.io/gh/fsm/getting-started/branch/master/graph/badge.svg" alt="codecov"></img></a>
   <a href="https://goreportcard.com/report/github.com/fsm/getting-started"><img src="https://goreportcard.com/badge/github.com/fsm/getting-started" alt="Go Report Card"></img></a>
-  <a href="https://gitter.im/fsm/Lobby"><img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="Gitter"></img></a>
+  <a href="https://spectrum.chat/fsm"><img alt="Join the community on Spectrum" src="https://withspectrum.github.io/badge/badge.svg"/></a>
 </p>
 
 # Getting Started
